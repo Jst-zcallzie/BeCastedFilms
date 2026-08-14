@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BeCastedFilms — Community for Teen Filmmakers</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="logo">BeCastedFilms</h1>
+      <p class="tagline">Independent film community for teenagers — create, learn, share.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="about">
+      <h2>About the Community</h2>
+      <p>BeCastedFilms is a non-profit community for teen filmmakers based in Olongapo City, Philippines (Zambales). We support young creators who want to learn and collaborate on independent film projects. This space is for community, practice, and collaboration.</p>
+      <p class="important">Please note: Participants in BeCastedFilms projects are not paid for shooting. By applying you acknowledge that you understand and accept that participation is voluntary and unpaid.</p>
+    </section>
+
+    <section class="application">
+      <h2>Application — Join the Community / Cast & Crew Opportunities</h2>
+      <p>Fill the form below if you're a teenager interested in joining or working on a project. Required fields are marked with *</p>
+
+      <form id="appForm" novalidate>
+        <div class="field-row">
+          <label for="firstName">First name *</label>
+          <input id="firstName" name="firstName" type="text" required />
+        </div>
+
+        <div class="field-row">
+          <label for="lastName">Last name *</label>
+          <input id="lastName" name="lastName" type="text" required />
+        </div>
+
+        <div class="field-row">
+          <label for="age">Age *</label>
+          <input id="age" name="age" type="number" min="13" max="19" required />
+        </div>
+
+        <div class="field-row">
+          <label for="social">Social media username (Instagram / TikTok / Twitter)</label>
+          <input id="social" name="social" type="text" placeholder="@username" />
+        </div>
+
+        <div class="field-row">
+          <label for="location">Where do you live? *</label>
+          <input id="location" name="location" type="text" required placeholder="City, Province, Country" />
+        </div>
+
+        <fieldset class="field-row">
+          <legend>Are you allowed to travel to Olongapo City? *</legend>
+          <label><input type="radio" name="travelOk" value="yes" required /> Yes</label>
+          <label><input type="radio" name="travelOk" value="no" /> No</label>
+        </fieldset>
+
+        <div class="field-row">
+          <label for="availability">Availability / short note</label>
+          <textarea id="availability" name="availability" rows="3" placeholder="When are you available? Any skills or roles you're interested in?"></textarea>
+        </div>
+
+        <div class="field-row small">
+          <label><input id="consent" name="consent" type="checkbox" required /> I confirm I am a teenager and I understand participation is voluntary and unpaid.</label>
+        </div>
+
+        <div class="buttons">
+          <button type="submit" id="submitBtn">Submit Application</button>
+          <button type="button" id="downloadBtn" class="secondary">Download JSON</button>
+        </div>
+
+        <p class="note">This is a static demo site: submissions are handled in your browser. See instructions below to receive applications by email or server.</p>
+      </form>
+
+      <div id="result" class="result" aria-live="polite" hidden></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Built by a 14 years old based in Olongapo City, Philippines — Zambales. Non-profit community.</p>
+      <p>Edited and created by wynm yupyup</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

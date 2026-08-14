@@ -1,0 +1,69 @@
+:root{
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --accent:#1b4f72;
+  --muted:#666;
+  --max:900px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  background:var(--bg);
+  color:#111;
+  line-height:1.45;
+}
+
+.wrap{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:1rem;
+}
+
+.site-header{
+  background:linear-gradient(90deg,#2b6a94,#1b4f72);
+  color:white;
+  padding:2rem 0;
+}
+.logo{margin:0;font-size:1.8rem}
+.tagline{margin:.25rem 0 0;color:rgba(255,255,255,.9)}
+
+.about, .application{
+  background:var(--card);
+  margin:1.25rem 0;
+  padding:1rem 1.25rem;
+  border-radius:8px;
+  box-shadow:0 6px 18px rgba(16,24,40,.06);
+}
+
+.about h2, .application h2{margin-top:0}
+
+.important{color:#8b1b1b;background:#fff2f2;padding:.6rem;border-radius:6px}
+
+.field-row{margin:.6rem 0;display:flex;flex-direction:column}
+.field-row.small{font-size:.95rem}
+label{font-weight:600;margin-bottom:.25rem}
+input[type="text"],input[type="number"],textarea{
+  padding:.6rem .75rem;border:1px solid #e3e7ee;border-radius:6px;
+  font-size:1rem;
+  background:linear-gradient(#fff,#fbfdff);
+}
+textarea{resize:vertical}
+
+fieldset{border:0;padding:0;margin:.6rem 0}
+legend{font-weight:600;margin-bottom:.5rem}
+
+.buttons{display:flex;gap:.6rem;align-items:center;margin-top:.6rem}
+button{background:var(--accent);color:white;border:0;padding:.6rem .9rem;border-radius:8px;cursor:pointer;font-weight:700}
+button.secondary{background:#e6eef6;color:var(--accent);font-weight:600}
+
+.note{font-size:.9rem;color:var(--muted);margin-top:.6rem}
+.result{margin-top:1rem;padding:.8rem;border-radius:8px;background:#f0fff6;color:#064e3b;border:1px solid #b7f5d4}
+
+.site-footer{padding:1rem 0;text-align:center;color:var(--muted);font-size:.95rem}
+@media (min-width:700px){
+  .field-row{flex-direction:row;align-items:center}
+  .field-row label{width:210px;margin-bottom:0}
+  .field-row input, .field-row textarea{flex:1}
+}
